@@ -1,6 +1,14 @@
 package main
-import "fmt"
 
-func main(){
-  fmt.Println("Hello from diego")
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	if len(os.Args) > 1 {
+		fmt.Println(os.Args[1])
+	} else {
+		fmt.Println("No parameter")
+	}
 }
